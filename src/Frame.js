@@ -6,6 +6,6 @@ async function init() {
       
     });
   
-    await board.viewport.zoomTo(frame);
+    //await board.viewport.zoomTo(frame);
   }
 init();
