@@ -7,6 +7,6 @@ async function init() {
       style:{cardTheme: color },
     });
   
-    await board.viewport.zoomTo(card);
+    //await board.viewport.zoomTo(card);
   }
 init();

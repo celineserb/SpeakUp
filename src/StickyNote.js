@@ -7,6 +7,6 @@ async function init() {
       style:{fillColor:color},
     });
   
-    await board.viewport.zoomTo(stickyNote);
+    //await board.viewport.zoomTo(stickyNote);
   }
 init();

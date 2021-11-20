@@ -7,6 +7,6 @@ async function init() {
       style:{fillColor:color},
     });
   
-    await board.viewport.zoomTo(text);
+    //await board.viewport.zoomTo(text);
   }
 init();
