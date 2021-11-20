@@ -1,5 +1,6 @@
 const { board } = window.miro;
-const {sticky} = './app.js';
+//const {sticky} = './app.js';
+var sticky = require("./app.js");
 
 
 var stop = 0;
@@ -40,7 +41,8 @@ async function init() {
         
         if (interim_transcript=='sticky' ){
           
-          board.ui.openPanel({ pageUrl: "app.html", maxHeight:7 })
+          //board.ui.openPanel({ pageUrl: "app.html", maxHeight:7})
+          sticky.init();
         }
         console.log("interim", interim_transcript);
            

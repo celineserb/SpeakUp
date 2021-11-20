@@ -382,7 +382,7 @@ type EventType = "drop" | AppEventType;
 // ----------------------------------------------------------------------------
 // User interface
 interface BoardUI {
-  openPanel(options: { pageUrl: string; maxHeight?: number }): Promise<void>;
+  openPanel(options: { pageUrl: string; maxHeight?: number  }): Promise<void>;
   closePanel(): Promise<void>;
   openModal(options: {
     pageUrl: string;
