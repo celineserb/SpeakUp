@@ -38,11 +38,28 @@ async function init() {
           console.log(interim_transcript);
         }
         
-        if (interim_transcript=='sticky' ){
+        switch(interim_transcript){
+          case 'sticky':
+            board.ui.openPanel({ pageUrl: "sticky_note.html", maxHeight:7 })
+            break;
+          case 'frame':
+            board.ui.openPanel({ pageUrl: "frame.html", maxHeight:7 })
+            break;
+          case 'card' :
+            board.ui.openPanel({ pageUrl: "card.html", maxHeight:7 })
+            break;
+          case 'shape':
+            board.ui.openPanel({ pageUrl: "shape.html", maxHeight:7 })
+            break;
+          case 'text' :
+            board.ui.openPanel({ pageUrl: "text.html", maxHeight:7 })
+            break;
+        }
+        /*if (interim_transcript=='sticky' ){
           
           board.ui.openPanel({ pageUrl: "app.html", maxHeight:7 })
         }
-        console.log("interim", interim_transcript);
+        console.log("interim", interim_transcript);*/
            
       }
 
