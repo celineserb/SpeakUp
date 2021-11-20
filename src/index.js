@@ -24,7 +24,8 @@ async function init() {
       speechRecognition.continuous = true;
       speechRecognition.interimResults = true;
       speechRecognition.start();
-      
+      board.ui.openPanel({ pageUrl: "start.html", maxHeight:2 })
+
       
       speechRecognition.onresult = (event) => {
         let interim_transcript = "";
@@ -38,7 +39,7 @@ async function init() {
             interim_transcript += event.results[i][0].transcript;
           }
           
-          if (interim_transcript.replace(/\s+/g, '')  =='sticky' ){
+          if (interim_transcript.replace(/\s+/g, '')  =='bluesticky' ){
             
             board.ui.openPanel({ pageUrl: "sticky_note.html", maxHeight:2 })
             var j = document.querySelector(".toolbar-library toolbar-library--3074457368019670423 toolbar-library--visible").style.visibility = "hidden";
@@ -77,6 +78,10 @@ async function init() {
             
             board.ui.openPanel({ pageUrl: "text.html", maxHeight:7 })
           }
+          else if (interim_transcript.replace(/\s+/g, '')=='redsticky' ){
+            console.log(final_transcript);
+            board.ui.openPanel({ pageUrl: "red_sticky_note.html", maxHeight:7 })
+          }
           else 
           {
             console.log("nothing was read" );
@@ -93,6 +98,8 @@ async function init() {
 
     }else{
       speechRecognition.stop();
+      board.ui.openPanel({ pageUrl: "stop.html", maxHeight:2 })
+
 
     }
     
